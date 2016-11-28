@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'mrthumb'
+
+configuration = Mrthumb::Configuration.new(
+  access_id: ENV['MRTHUMB_ACCESS_ID']
+  secret_id: ENV['MRTHUMB_SECRET_ID']
+)
+
+@client = Mrthumb::Client.new(configuration)
+
+require "irb"
+IRB.start
